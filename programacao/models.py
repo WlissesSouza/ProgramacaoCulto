@@ -15,7 +15,7 @@ class OrdemProgramacao(models.Model):
         ('Mensagem', 'Mensagem'),
         ('Sermao', 'Sermao'),
     ]
-
+    tarefa_id = models.AutoField(primary_key=True)  # Geração automática de números inteiros
     hora = models.TimeField()  # Seleção de hora
     acao = models.CharField(max_length=50, choices=ACOES_CHOICES, blank=True)
     descricao = models.CharField(max_length=100, blank=True)  # Descrição adicional
