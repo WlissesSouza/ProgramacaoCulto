@@ -47,6 +47,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+# NESCESSARIO PARA RETORNAR JSON
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',  # Renderiza apenas JSON
+    ],
+}
 
 ROOT_URLCONF = 'ProgramacaoCulto.urls'
 
